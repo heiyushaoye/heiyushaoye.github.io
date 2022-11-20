@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>学习随笔</title>
+  <icon>https://www.vipyubai.top/icon.png</icon>
+  <subtitle>以平凡开始，以平凡结束</subtitle>
+  <link href="https://www.vipyubai.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.vipyubai.top/"/>
+  <updated>2022-08-31T09:32:57.000Z</updated>
+  <id>https://www.vipyubai.top/</id>
+  
+  <author>
+    <name>余白</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于我电脑崩了这件事</title>
+    <link href="https://www.vipyubai.top/post/46815.html"/>
+    <id>https://www.vipyubai.top/post/46815.html</id>
+    <published>2022-08-31T09:32:57.000Z</published>
+    <updated>2022-08-31T09:32:57.000Z</updated>
+    
+    
+    <summary type="html">windos系统重装教程</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.vipyubai.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Course" scheme="https://www.vipyubai.top/tags/Course/"/>
+    
+    <category term="系统重装" scheme="https://www.vipyubai.top/tags/%E7%B3%BB%E7%BB%9F%E9%87%8D%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo的优化：又拍云cdn访问加速</title>
+    <link href="https://www.vipyubai.top/post/a42befc6.html"/>
+    <id>https://www.vipyubai.top/post/a42befc6.html</id>
+    <published>2022-08-27T09:36:10.000Z</published>
+    <updated>2022-08-27T09:36:10.000Z</updated>
+    
+    
+    <summary type="html">博客访问速度的优化！！！</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.vipyubai.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.vipyubai.top/tags/Hexo/"/>
+    
+    <category term="Course" scheme="https://www.vipyubai.top/tags/Course/"/>
+    
+    <category term="cdn" scheme="https://www.vipyubai.top/tags/cdn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github搭建个人博客教程（二）</title>
+    <link href="https://www.vipyubai.top/post/a42befc66.html"/>
+    <id>https://www.vipyubai.top/post/a42befc66.html</id>
+    <published>2022-08-21T17:24:50.000Z</published>
+    <updated>2022-08-21T17:24:50.000Z</updated>
+    
+    
+    <summary type="html">详细hexo博客搭建教程！</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.vipyubai.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.vipyubai.top/tags/Hexo/"/>
+    
+    <category term="Course" scheme="https://www.vipyubai.top/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github搭建免费博客教程(一)</title>
+    <link href="https://www.vipyubai.top/post/a42befc0.html"/>
+    <id>https://www.vipyubai.top/post/a42befc0.html</id>
+    <published>2022-08-21T17:24:39.000Z</published>
+    <updated>2022-08-21T17:24:39.000Z</updated>
+    
+    
+    <summary type="html">详细hexo博客搭建教程！</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.vipyubai.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.vipyubai.top/tags/Hexo/"/>
+    
+    <category term="Course" scheme="https://www.vipyubai.top/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>butterfly美化日记(二)</title>
+    <link href="https://www.vipyubai.top/post/a42befc33.html"/>
+    <id>https://www.vipyubai.top/post/a42befc33.html</id>
+    <published>2022-08-21T16:02:11.000Z</published>
+    <updated>2022-08-21T16:02:11.000Z</updated>
+    
+    
+    <summary type="html">优质的butterfly美化教程推荐！</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.vipyubai.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.vipyubai.top/tags/Hexo/"/>
+    
+    <category term="Course" scheme="https://www.vipyubai.top/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>butterfly美化日记(一)</title>
+    <link href="https://www.vipyubai.top/post/a42befc2.html"/>
+    <id>https://www.vipyubai.top/post/a42befc2.html</id>
+    <published>2022-08-21T16:01:11.000Z</published>
+    <updated>2022-08-21T16:01:11.000Z</updated>
+    
+    
+    <summary type="html">butterfly美化步骤记录！</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.vipyubai.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.vipyubai.top/tags/Hexo/"/>
+    
+    <category term="Course" scheme="https://www.vipyubai.top/tags/Course/"/>
+    
+  </entry>
+  
+</feed>

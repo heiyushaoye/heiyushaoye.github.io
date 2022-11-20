@@ -1,0 +1,720 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hexo+Github搭建个人博客教程（二） | 学习随笔</title><meta name="keywords" content="Hexo,Course"><meta name="author" content="余白"><meta name="copyright" content="余白"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="详细hexo博客搭建教程！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github搭建个人博客教程（二）">
+<meta property="og:url" content="https://www.vipyubai.top/post/a42befc66.html">
+<meta property="og:site_name" content="学习随笔">
+<meta property="og:description" content="详细hexo博客搭建教程！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/HEXO1.png">
+<meta property="article:published_time" content="2022-08-21T17:24:50.000Z">
+<meta property="article:modified_time" content="2022-08-21T17:24:50.000Z">
+<meta property="article:author" content="余白">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Course">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/HEXO1.png"><link rel="shortcut icon" href="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/yulogo.png"><link rel="canonical" href="https://www.vipyubai.top/post/a42befc66"><link rel="preconnect" href="//cdn1.tianli0.top"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.sourcegcdn.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdnjs.sourcegcdn.com/ajax/libs/jquery/3.6.0/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdnjs.sourcegcdn.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdnjs.sourcegcdn.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdnjs.sourcegcdn.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js',
+      css: 'https://cdnjs.sourcegcdn.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-08-22 01:24:50'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        })(window)</script><link rel="stylesheet" href="/html/style.html"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/style.css"  media="defer" onload="this.media='all'"><script src="/js/SAO-Notify.js" async></script><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="学习随笔" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="学习随笔" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="simply-cha-top"></div><div class="is-center" id="sidebar-avatar"><div class="avatar-img"><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/余白2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">余白</div><div class="author-info__description">欢迎光临余白の小屋！</div></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/2X-ercha"><i class="fab fa-github"></i><span> Follow Me</span></a><div class="menu-info-social-icons is-center"><a class="social-icon" href="https://github.com/heiyushaoye" target="_blank" title="Github"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg></a><a class="social-icon" href="mailto:5824795@qq.com" target="_blank" title="Email"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-youxiang"></use></svg></a><a class="social-icon" href="https://space.bilibili.com/423405751" target="_blank" title="Bilibili"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-CN_bilibiliB"></use></svg></a><a class="social-icon" href="https://music.163.com/#/user/home?id=1664121825" target="_blank" title="网易云"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg></a><a class="social-icon" href="/about/" target="_blank" title="rss"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss"></use></svg></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xigua1"></use></svg><span> 余白の小窝</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-100px;"><li><a class="site-page child" href="/tags/Course/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiaocheng"></use></svg><span> 教程分享</span></a></li><li><a class="site-page child" href="/tags/resource/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiangmu"></use></svg><span> 资源整理</span></a></li><li><a class="site-page child" href="/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiaocheng"></use></svg><span> 文章分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-miao"></use></svg><span> 笔记</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-100px;"><li><a class="site-page child" href="/tags/java/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-colorful-code"></use></svg><span> 学学Java</span></a></li><li><a class="site-page child" href="/tags/html/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-colorful-code"></use></svg><span> 看看前端</span></a></li><li><a class="site-page child" href="/tags/SSM/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-colorful-code"></use></svg><span> 用用框架</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tea"></use></svg><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-100px;"><li><a class="site-page child" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-pengyou"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" href="/biographical%20notes/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-pengyouquanzhushou2x"></use></svg><span> 个人简历</span></a></li><li><a class="site-page child" href="/messageboard/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shuoshuo-"></use></svg><span> 留言信枫</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-liuyan"></use></svg><span> 本站</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-45px;"><li><a class="site-page child" href="/tags/Diary/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban-"></use></svg><span> 更新手帐</span></a></li><li><a class="site-page child" href="/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xinfeng"></use></svg><span> 关于本站</span></a></li></ul></div></div><div class="simply-cha"></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/">学习随笔</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xigua1"></use></svg><span> 余白の小窝</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-100px;"><li><a class="site-page child" href="/tags/Course/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiaocheng"></use></svg><span> 教程分享</span></a></li><li><a class="site-page child" href="/tags/resource/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiangmu"></use></svg><span> 资源整理</span></a></li><li><a class="site-page child" href="/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiaocheng"></use></svg><span> 文章分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-miao"></use></svg><span> 笔记</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-100px;"><li><a class="site-page child" href="/tags/java/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-colorful-code"></use></svg><span> 学学Java</span></a></li><li><a class="site-page child" href="/tags/html/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-colorful-code"></use></svg><span> 看看前端</span></a></li><li><a class="site-page child" href="/tags/SSM/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-colorful-code"></use></svg><span> 用用框架</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tea"></use></svg><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-100px;"><li><a class="site-page child" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-pengyou"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" href="/biographical%20notes/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-pengyouquanzhushou2x"></use></svg><span> 个人简历</span></a></li><li><a class="site-page child" href="/messageboard/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shuoshuo-"></use></svg><span> 留言信枫</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-liuyan"></use></svg><span> 本站</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child" style="left:-45px;"><li><a class="site-page child" href="/tags/Diary/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban-"></use></svg><span> 更新手帐</span></a></li><li><a class="site-page child" href="/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xinfeng"></use></svg><span> 关于本站</span></a></li></ul></div></div></div><div id="navFn"><div id="search-button"><a class="social-icon search"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg><span> 搜索</span></a></div><div id="darkmodeBt"><a class="darkmode switch"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-deng1"></use></svg><span id="darkmode-switch"> 关灯</span></a></div><div id="toggle-menu"><a class="site-page"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mulu"></use></svg></a></div></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Hexo+Github搭建个人博客教程（二）</h1><div id="post-meta"><div class="tag-cloud-list is-center"><a href="/tags/Hexo/" style="font-size: 1.5em; color: rgb(74, 99, 78)">Hexo</a><a href="/tags/Course/" style="font-size: 1.8em; color: rgb(49, 25, 117)">Course</a></div><div class="meta-firstline"><span class="post-meta-date"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-21T17:24:50.000Z" title="发表于 2022-08-22 01:24:50">2022-08-22</time><span class="post-meta-separator">|</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-21T17:24:50.000Z" title="更新于 2022-08-22 01:24:50">2022-08-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fenlei1"></use></svg><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hexo+Github搭建个人博客教程（二）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div><div class="line"> <svg class="icon" aria-hidden="true"><use xlink:href="#icon-xigua2"></use></svg><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xigua2"></use></svg><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xigua2"></use></svg><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xigua2"></use></svg><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xigua2"></use></svg></div></div></div><article class="post-content" id="article-container"><p><script type="text/javascript">
+SAONotify('Hello','欢迎来到余白的博客❤<span class="inline-tag red">联系方式vx：joker_yubai<br/>右下角打开目录！！！</span>','location.reload(true);');
+</script></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li>这篇教程接上篇教程，在上篇教程的基础上在进行</li>
+<li><strong>全文根目录值安装 hexo 框架的根目录，主题目录至 安装 butterfly 主题的目录</strong></li>
+<li><strong>配置文件指  _config 配置文件，主题配置文件指 _config.butterfly 主题配置文件</strong></li>
+<li><a href="https://www.vipyubai.top/post/a42befc0.html">点击这里跳转上篇教程</a></li>
+</ul>
+<h1 id="博客关键页面生成"><a href="#博客关键页面生成" class="headerlink" title="博客关键页面生成"></a>博客关键页面生成</h1><p>博客有一些关键页面需要手动生成，你需要什么页面，就用此方法生成即可</p>
+<h2 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h2><p>进入 Hexo 博客的根目录，执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>打开 <code>source/tags/index.md</code> 文件，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2022-08-03 12:53:45</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h2><p>进入 Hexo 博客的根目录，执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>打开 <code>source/categories/index.md 文件</code>，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2022-03-11 12:56:06</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h2><h3 id="创建友情链接页面"><a href="#创建友情链接页面" class="headerlink" title="创建友情链接页面"></a>创建友情链接页面</h3><p>进入 Hexo 博客的根目录，执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page link</span><br></pre></td></tr></table></figure>
+<p>打开 <code>source/link/index.md</code> 文件，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友情链接</span><br><span class="line">date: 2022-03-11 12:57:48</span><br><span class="line">type: &quot;link&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="友情链接添加"><a href="#友情链接添加" class="headerlink" title="友情链接添加"></a>友情链接添加</h3><p>在Hexo博客目录中的 <code>source/friends/创建一个文件</code>lndex.md`，一个简单的友情链接就有了</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220804182129527.png" alt="image-20220804182129527"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: friends</span><br><span class="line">date: 2022-08-03 08:18:23</span><br><span class="line">type: &quot;friends&quot;</span><br><span class="line">layout: &quot;friends&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># 友链交换</span><br><span class="line">想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</span><br><span class="line">* **名称：**你的博客名称</span><br><span class="line">* **地址：**你的博客地址</span><br><span class="line">* **简介：**一句话简介</span><br><span class="line">* **头像：**你的头像地址</span><br><span class="line"></span><br><span class="line">例如我的博客友链，大家可以加到自己博客里哦：</span><br><span class="line">* **名称：**余白</span><br><span class="line">* **地址：**https:&#x2F;&#x2F;heiyushaoye.github.io</span><br><span class="line">* **简介：**无处不在</span><br><span class="line">* **头像：**头像地址</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>预览效果如下，就表示成功了，然后直接跳到帮助文档的404页面</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803090849053.png" alt="image-20220803090849053" style="zoom:50%;" /> </p>
+</li>
+</ul>
+<h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p>进入 Hexo 博客的根目录，执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+<p>打开 <code>source/about-me/index.md</code> 文件，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 关于作者</span><br><span class="line">date: 2022-03-11 13:01:21</span><br><span class="line">type: &quot;about&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>说明：</li>
+</ul>
+<p>​                重点：<strong>所有的文件都在source，这个文件夹下</strong>，按照官方文档提示，修改文件即可！</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803075725093.png" alt="image-20220803075725093" style="zoom:50%;" /> </p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803080209008.png" alt="image-20220803080209008" style="zoom:50%;" /> </p>
+<ul>
+<li>修改完成后，通过路由本地预览一下好了没，要养成习惯，完成一步，预览一步，这一出现错误好纠正<ul>
+<li>路由格式：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> tags</li>
+</ul>
+</li>
+</ul>
+<p>​                        tags        其实就是对应的你要实现功能的名称，需要预览什么 功能，就修改成对应的功能名称</p>
+<h3 id="404-页面添加"><a href="#404-页面添加" class="headerlink" title="404 页面添加"></a>404 页面添加</h3><ul>
+<li>找到：node_modules——————&gt;hexo-theme-butterfly——————&gt;_config.yml</li>
+</ul>
+<ul>
+<li>【前面操作过的可以直接打开内容即可】 将文件里面的内容全部复制，执行图下面的操作，然后将所有代码粘贴到新建的文件里，这个文件就是我们主题配置的文件<img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803094322872.png" alt=""></li>
+</ul>
+<ul>
+<li><p>找到error 404 ，将帮助内容置换即可</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803094913962.png" style="zoom:67%;" /> </p>
+</li>
+</ul>
+<h2 id="主页背景更改"><a href="#主页背景更改" class="headerlink" title="主页背景更改"></a>主页背景更改</h2><p>两种方式选择一个即可【 第一个使用了，没有成功的话在使用第二个，要想背景好看建议掌握第二种方式自己写，或者引入别人的css样式 】</p>
+<p>方式一：</p>
+<p>更改其图标、主页背景等部分内容，在主题的配置文件下</p>
+<ul>
+<li><p>更改背景的话建议使用占位图（就是将本地图片上传到图床）</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220804164957434.png" alt="image-20220804164957434"></p>
+</li>
+</ul>
+<ul>
+<li>更改主页 主题背景的时候，如果要使用本地图片记得创建文件夹 img ，将图片放进此文文件，方便管理，复制其路径，粘贴到对应位置，然后在注意一下本地图片的格式即可， .表示当前路径</li>
+</ul>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220804144408584.png" alt="image-20220804144408584" style="zoom:67%;" /> </p>
+<ul>
+<li>留意: 如果你的网站根目录不是<code>/</code>,使用本地图片时，需加上你的根目录。<br>例如：网站是<code>https://yoursite.com/blog</code>,引用一张<code>img/xx.png</code>图片，则设置<code>background</code>为 <code>url(/blog/img/xx.png)</code></li>
+</ul>
+<p>方式二（通过数据文件的方式）：</p>
+<p>​    在 source/_data/style.styl 文件中添加：（如果没有这个路径的话添加即可）</p>
+   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 背景</span><br><span class="line">body &#123;</span><br><span class="line">  background-image:url(..&#x2F;images&#x2F;bg.webp);</span><br><span class="line">  height:100%;</span><br><span class="line">  width:100%;</span><br><span class="line">  background-repeat:repeat-x;</span><br><span class="line">  background-attachment:fixed;</span><br><span class="line">  background-size:cover;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;设置透明度</span><br><span class="line">&#x2F;&#x2F;侧边框的透明度设置</span><br><span class="line">.sidebar-inner &#123;</span><br><span class="line">  background: rgba(255,255,255,0.8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;菜单栏的透明度设置</span><br><span class="line">.header-inner &#123;</span><br><span class="line">  background: rgba(255,255,255,0.8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;搜索框（local-search）的透明度设置</span><br><span class="line">.popup &#123;</span><br><span class="line">  opacity: 0.8;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>background-image 就是你的背景图啦。</p>
+<h1 id="主题配置（一）"><a href="#主题配置（一）" class="headerlink" title="主题配置（一）"></a>主题配置（一）</h1><p>前<strong>面章节带大家看了一下文档，当然官方文档还有很多，这里就不罗列了，希望大家掌握方法，仔细阅读文档，重要的我会在这强调</strong></p>
+<p>这里只强调几点：</p>
+<ul>
+<li>官方文档，可能格式没有设置，需要自己调整一下缩进</li>
+</ul>
+<ul>
+<li>每新增一个功能最好本地预览下，成功了在执行后面的</li>
+</ul>
+<ul>
+<li><p>为了以后大家配置方便，最好配置一下package.json，就可以通过编辑器运行这行代码，就不用傻傻的一个一个敲了！</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;server&quot;: &quot;hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server&quot;</span><br><span class="line">修改第九行，这行代码可以省去每次都要清理，然后生成静态页面，这个步骤，</span><br><span class="line">然后每次运行的时候也可以不用去输入命令行，可以找到这行代码然后点击 server 运行即可</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>都开始主题配置了，大多数修改的文件都是 _ config.butterfly.yml 这个主题配置文件</li>
+</ul>
+<h2 id="导航栏的说明："><a href="#导航栏的说明：" class="headerlink" title="导航栏的说明："></a>导航栏的说明：</h2><ul>
+<li><p>注意：</p>
+<ul>
+<li>圆圈是你要在 source 文件夹下建立的文件夹，名称相同，然后在新建的文件夹下，新建index.md 文件</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>方框的内容是自己随意更改的</li>
+</ul>
+<ul>
+<li>注意一下文档的缩进</li>
+</ul>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220804151047939.png" alt="image-20220804151047939" style="zoom:67%;" /> </p>
+<ul>
+<li><p>详解：</p>
+<ul>
+<li>分类                             是指标签栏的名称</li>
+<li>/  内容  /                       是指路径，source文件夹下——-&gt;categories文件夹下——-&gt;i ndex.md 文件【自动去匹配】</li>
+<li>fas fa-home                是图标</li>
+</ul>
+<p>​            <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220804151824283.png" alt=""></p>
+</li>
+</ul>
+<ul>
+<li><p>导航栏的修改（注意二级的格式）</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  主页: &#x2F; || fas fa-home</span><br><span class="line">  时间线: &#x2F;archives&#x2F; || fas fa-archive</span><br><span class="line">  标签: &#x2F;tags&#x2F; || fas fa-tags</span><br><span class="line">  分类: &#x2F;categories&#x2F; || fas fa-folder-open</span><br><span class="line">  链接||fas fa-list:</span><br><span class="line">    友链: &#x2F;link&#x2F; || fas fa-link</span><br><span class="line">    关于: &#x2F;about&#x2F; || fas fa-heart</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line">cnpm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<p>修改主题配置文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">YMLwordcount:</span><br><span class="line">  enable: true</span><br><span class="line">  post_wordcount: true</span><br><span class="line">  min2read: true</span><br><span class="line">  total_wordcount: true</span><br></pre></td></tr></table></figure>
+<p>如需调整右侧卡片网站信息内项目的数据，在文件<code>/butterfly/layout/includes/widgets/card_webinfo.pug</code>中操作。</p>
+<h2 id="目录折叠"><a href="#目录折叠" class="headerlink" title="目录折叠"></a>目录折叠</h2><p>由于我个人的目录比较大，完全展开三级目录的话，右边栏就完全被目录铺满了。<code>butterfly</code>主题提供了目录可折叠的选项，只需要在主题配置文件<code>/butterfly/config.yml</code>设置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">card_categories:</span> </span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">0</span> <span class="comment"># if set 0 will show all</span></span><br><span class="line">  <span class="attr">expand:</span> <span class="literal">true</span> <span class="comment"># none/true/false</span></span><br><span class="line">  <span class="attr">sort_order:</span> <span class="comment"># Don&#x27;t modify the setting unless you know how it works</span></span><br></pre></td></tr></table></figure>
+<h1 id="主题配置（二）"><a href="#主题配置（二）" class="headerlink" title="主题配置（二）"></a>主题配置（二）</h1><p>重点看下我提的内容，其余想加的可以自己看下文档，然后添加上即可</p>
+<ul>
+<li>评论系统 （我目前使用来必力，但是我觉得没必要，为了给你们演示下，后期应该会关掉，毕竟也没多少人看我的文章）</li>
+</ul>
+<p>​        如有需要看后面章节自行添加即可</p>
+<ul>
+<li><p>搜索系统</p>
+<ul>
+<li><p>直接点 本地搜素 ———&gt; hexo-algoliasearch  然后看帮助文档，按照文档步骤一步一步操作即可</p>
+<ul>
+<li><p>打开终端 使用命令：<code>npm install hexo-algoliasearch --save</code>，安装需要的插件</p>
+</li>
+<li><p>项目的根目录 _config.yml 配置文件下，将如下我修改过的代码复制到文件末尾（官方给的那个有 坑 ）。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>看下 _config.butterfly.yml 文件的 local_search 有没有打开，打开了就预览一下效果,有搜索框了就欧克了！！</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>​                                        <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803160405455.png" alt="image-20220803160405455" style="zoom:67%;" /></p>
+<p>​</p>
+<ul>
+<li><p>页面美化</p>
+<ul>
+<li><p>根据官方文档和我修改的beautifly，在结合你的喜好，修改一下就好了</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">beautify:</span><br><span class="line">  enable: true</span><br><span class="line">  field: post # site&#x2F;post</span><br><span class="line">  title-prefix-icon: # &#39;\f0c1&#39;</span><br><span class="line">  title-prefix-icon-color: # &#39;#F47466&#39;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>网站的副标题，根据自己的喜好调试即可，附上我的样式</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803164034567.png" alt="image-20220803164034567" style="zoom:67%;" /> </p>
+</li>
+</ul>
+<ul>
+<li><p>设置主页面高度，根据自己的喜好设置即可</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803165153927.png" alt="image-20220803165153927" style="zoom:67%;" /> </p>
+</li>
+</ul>
+<ul>
+<li><p>字数统计</p>
+<p>​    根据文档自己设置一下</p>
+</li>
+</ul>
+<ul>
+<li>prefetch (預加載)、pangu、pjax，将这些服务开启。（false改为true即可）</li>
+</ul>
+<h1 id="进阶文档"><a href="#进阶文档" class="headerlink" title="进阶文档"></a>进阶文档</h1><p>PS:</p>
+<ul>
+<li>这部分根据自己喜好，看官方文档配置即可</li>
+<li>魔改官方主题的尽头其实就是默认就好哈哈</li>
+</ul>
+<h1 id="gulp压缩"><a href="#gulp压缩" class="headerlink" title="gulp压缩"></a>gulp压缩</h1><p>​    根据下方推荐视频配置即可</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1i64y1i75w/?spm_id_from=333.788&amp;vd_source=71e92a1364cbcaf80125baa05f89bc60">gulp</a></li>
+</ul>
+<p>随着网站的发展，你的文件会越来越多，安装这个插件，可以压缩代码，从而实现代码部分的优化,根据我的步骤一步一步操作即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">安装gulp的cli：</span><br><span class="line">	npm install --global gulp-cli</span><br><span class="line">	</span><br><span class="line">安装gulp本身工具：</span><br><span class="line">	npm install gulp -g</span><br><span class="line"></span><br><span class="line">npm install gulp-htmlclean --save-dev</span><br><span class="line"></span><br><span class="line">npm install --save gulp-html-minifier-terser</span><br><span class="line"></span><br><span class="line">npm install gulp-clean-css --save-dev</span><br><span class="line"></span><br><span class="line">npm install --save-dev gulp-uglify</span><br><span class="line"></span><br><span class="line">npm install --save-dev gulp-babel @babel&#x2F;core @babel&#x2F;preset-env</span><br><span class="line"></span><br><span class="line">npm install --save-de</span><br><span class="line">v gulp-imagemin</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在根目录下，创建文件 gulpfile.js 文件</li>
+</ul>
+<h1 id="添加来必力评论系统"><a href="#添加来必力评论系统" class="headerlink" title="添加来必力评论系统"></a>添加来必力评论系统</h1><ul>
+<li><p>我选择这个系统，是因为这个系统能过滤一些不友好的评论，评论能及时提醒、免费等，但是用了几天后发现，太简洁了于是换了Twikoo 评论系统，就不做过多的介绍了。</p>
+</li>
+<li><p>来比力可以看我的教程，并附上一篇大佬的教程：<a target="_blank" rel="noopener" href="https://tzy1997.com/articles/hexo1611/">Vercel + MongoDB 方案搭建 Twikoo 评论系统</a>  包含全部评论系统的搭建</p>
+</li>
+</ul>
+<p>​    <strong>当然也可以选择其它的，自己根据帮助文档配置下 喜欢折腾，美观的就不建议这个评论系统了，建议  Twikoo</strong></p>
+<p>​    <strong>来比力评论系统</strong></p>
+<ul>
+<li><p>在主题配置文件找到 comments</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803173343335.png" alt="image-20220803173343335" style="zoom:67%;" /> </p>
+</li>
+<li><p>注册来必力，然后登录，然后右上角管理页面，输入必要的信息，最后出现以下的界面，将对应的uid 输入配置文件即可</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803174708485.png" alt="image-20220803174708485" style="zoom:67%;" /> </p>
+</li>
+</ul>
+<p>​</p>
+<p>​            <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803174840722.png" alt="image-20220803174840722" style="zoom:67%;" /></p>
+<p>​        粘贴的时候注意格式，只粘贴引号里面的内容，还有冒号后面有一个空格</p>
+<ul>
+<li>在来必力系统进行一些必要的设置，比如：评论邮件提醒，选择登录方式等等</li>
+</ul>
+<ul>
+<li><p>最后本地运行，随便找一篇文章，看效果即可</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803175530564.png" alt="image-20220803175530564" style="zoom:67%;" /> </p>
+</li>
+</ul>
+<h1 id="插入代码自定义样式的说明"><a href="#插入代码自定义样式的说明" class="headerlink" title="插入代码自定义样式的说明"></a>插入代码自定义样式的说明</h1><ul>
+<li><p>自定义代码的拆入方法</p>
+<ul>
+<li><p>先找到 主题配置文件的  inject</p>
+<p>​    一般样式文件会放到 head 里面 ，js文件放在 bottom 里面</p>
+</li>
+<li><p>新建文件夹，按照箭头位置创建即可，名称随意</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803180720134.png" alt="image-20220803180720134" style="zoom:67%;" /> </p>
+</li>
+<li><p>将新建的文件夹，引入到 inject 里面即可，然后运行项目即可</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803181203355.png" alt="image-20220803181203355" style="zoom:67%;" /> </p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>底部的样式修改（掌握方法后，直接去网上找一些别人改好的样式，复制粘贴即可）</p>
+<p>方法：直接F12然后找到你要修改的标签id，然后返回刚才那个建好的css文件，在里面添加css代码，修改对应的样式即可</p>
+<p>比如修改底部样式为透明</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803181853683.png" alt="image-20220803181853683" style="zoom:67%;" /> </p>
+</li>
+</ul>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803182602841.png" alt="image-20220803182602841"></p>
+<ul>
+<li><p>底部添加多个内容信息，并且点击跳转的说明：（有需要的自行了解一下）</p>
+<p> <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803184455538.png" alt="image-20220803184455538" style="zoom:67%;" /> </p>
+</li>
+</ul>
+<p>​    具体效果如下：</p>
+<p>​        <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220803184107209.png" alt="image-20220803184107209" style="zoom:67%;" /></p>
+<h1 id="博客添加文章说明"><a href="#博客添加文章说明" class="headerlink" title="博客添加文章说明"></a>博客添加文章说明</h1><ul>
+<li>首先在博客根目录下右键打开git bash，安装一个扩展<code>npm i hexo-deployer-git</code>。</li>
+</ul>
+<ul>
+<li>然后输入 hexo new post “article title” ，新建一篇文章。article title 是你的文件名称，自行更改</li>
+</ul>
+<ul>
+<li>然后打开<code>D:blog\source\_posts</code>的目录，可以发现下面多了一个<code>.md</code>文件，在内容部分就可以添加你想加入的内容即可（ps：图片最好上传到图床）</li>
+</ul>
+<ul>
+<li><p>编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到github上。这时打开你的github.io主页就能看到发布的文章啦。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>博客文件的说明：</p>
+<ul>
+<li><p>.md 文件的下面这部分是你的文章信息的配置，根据官方文档或者安装相应的插件，调整为对应的属性即可，这些属性什么含义，参考官方帮助文档即可</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808175748541.png" alt="image-20220808175748541"></p>
+</li>
+<li><p>在这个部分下面就是你文章的主题内容了，根据 markdown 的语法自行编辑即可</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>安装了什么插件就加入对应的标签信息配置即可</li>
+</ul>
+<h1 id="博客的部署"><a href="#博客的部署" class="headerlink" title="博客的部署"></a>博客的部署</h1><p>通过前面的步骤，你的网址已经出具成果了，想必大家已经迫不及待的想看看成果了把，这个章节就和大家唠唠部署这件事，</p>
+<p><strong>首先需要明确：通过部署可以提高你博客的访问速度，请大家务必看完此章节内容</strong></p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>推荐： .top 结尾的域名，首年新用户只需要1元，来年只需要25一年</p>
+<p>购买方式：什么平台都可以</p>
+<h2 id="域名的备案授权"><a href="#域名的备案授权" class="headerlink" title="域名的备案授权"></a>域名的备案授权</h2><ul>
+<li><p>用新用户的身份买一个轻量的服务器</p>
+<ul>
+<li>腾讯云、阿里云等，尽量域名在哪买的就在那买服务器</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>某宝去买授权嘛，备案域名</li>
+</ul>
+<ul>
+<li>服务器到期后，可以不续费服务器，然后备案，具体的方式就不说了，下去自行了解</li>
+</ul>
+<h2 id="双线部署及全站-CDN-加速"><a href="#双线部署及全站-CDN-加速" class="headerlink" title="双线部署及全站 CDN 加速"></a>双线部署及全站 CDN 加速</h2><p>以前 coding 部署是国内用的人最多的方式，乃何被某腾收购，需要域名并且备案</p>
+<p><strong>当然我这里提供两套方案：收费的和不收费的自行选择即可，（ps：会详细注明那套收费那套不收费）</strong></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p><strong>下面两个方案这个部分都需要先操作这个单元，当然这是有域名的情况下，没有域名的就可以直接看 vercel 免费部署</strong></p>
+<ul>
+<li><p>部署到 GitHub</p>
+<p>这里就不bb了，看上面内容就行</p>
+</li>
+</ul>
+<ul>
+<li><p>购买域名</p>
+<ul>
+<li><p>这里不再赘述，要会基本的解析操作。</p>
+</li>
+<li><p>添加解析记录（ps：这个小节看下，后面 vercel 部署还会在讲）</p>
+<p>​    <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808183452273.png" alt="image-20220808183452273"></p>
+</li>
+</ul>
+</li>
+<li><p>绑定域名</p>
+<ul>
+<li><p>首先要获取博客当前默认域名的 ip ,打开 cmd 输入</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ping username.github.io</span><br><span class="line"># username记得替换成你的用户名</span><br></pre></td></tr></table></figure>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808184708869.png" alt="image-20220808184708869"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>获取到的<code>ip</code>地址填入域名解析</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808184744745.png" alt="image-20220808184744745"></p>
+</li>
+<li><p>进入解析页面后需要添加两条记录。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808184821197.png" alt="image-20220808184821197"></p>
+<ul>
+<li><p>两条记录的说明：</p>
+<p>​                实质起作用的其实是第一条<code>A</code>记录，而第二条<code>CNAME</code>记录指向的其实是<code>www</code>的二级域名。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Github的 Pages 功能 自定义上你的域名</p>
+<ul>
+<li><p>步骤：打开 Github你的博客项目——&gt; Settings 选项卡 ——&gt; GiPages 选项：在 Custom domain 添加你的自定义域名</p>
+<p>​            刷新页面  如果能勾选 Enforce HTTPS 即完成。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808183150209.png" alt="image-20220808183150209"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><ul>
+<li>如果你将你的域名配置到 github 上了，以后修改了，重新部署的话，GitHub显示已经上传成功了，但是用你的域名访问，没有变话，这就需要你重新去 解析一下域名</li>
+</ul>
+<h1 id="部署到-coding"><a href="#部署到-coding" class="headerlink" title="部署到 coding"></a>部署到 coding</h1><p><strong>此方案为收费方案</strong></p>
+<ul>
+<li>跟着下方视频一步一步操作即可<ul>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1d64y1q7KS?spm_id_from=333.880.my_history.page.click&amp;vd_source=71e92a1364cbcaf80125baa05f89bc60">双线部署与cdn加速</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="部署到vercel"><a href="#部署到vercel" class="headerlink" title="部署到vercel"></a>部署到vercel</h1><p><strong>此方案为免费方案</strong>，但是还是部署在国外的懂的都懂</p>
+<ul>
+<li><p>注册账号</p>
+<p>进入<a target="_blank" rel="noopener" href="https://vercel.com/">Vercel</a>官网，先去注册一个账号，使用GIthub账号来登录Vercel。</p>
+</li>
+<li><p>部署网站</p>
+<p>进入 <a target="_blank" rel="noopener" href="https://vercel.com/dashboard">Dashboard</a>，点击New project 创建项目</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808190639367.png" alt="image-20220808190639367"></p>
+</li>
+<li><p>这里可以从已有的 git repository 中导入，也可以选择一个模板。将你的博客项目导入即可</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808190831196.png" alt="image-20220808190831196"></p>
+</li>
+</ul>
+<ul>
+<li>接下来 点击Deploy，然后静等网站安装依赖以及部署</li>
+</ul>
+<ul>
+<li><p>等项目部署完成，到你的项目出现以下页面，将箭头所指网页，到浏览器就可以访问了</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808191215000.png" alt="image-20220808191215000"></p>
+</li>
+</ul>
+<h5 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h5><p>如果有自己的域名，还可以在 vercel 中进行设置。首先进入 blog 的控制台，在Settings -&gt; Domains 添加域名。‘</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808191420297.png" alt="image-20220808191420297"></p>
+<ul>
+<li><p>接着域名需要 DNS 解析到 vercel 提供的记录值</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808191509767.png" alt="image-20220808191509767"></p>
+</li>
+<li><p>登录所在的域名服务商，根据 Vercel 提供的记录值，添加两条记录</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808191609850.png" alt="image-20220808191609850"></p>
+</li>
+<li><p>此时回到Vercel，可以看到记录值成功生效。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220808191706787.png" alt="image-20220808191706787"></p>
+</li>
+<li><p>此时访问自己的域名，同样也能访问到页面</p>
+</li>
+</ul>
+<h5 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h5><ul>
+<li><p>当主分支有代码被推送，Vercel 将会重新拉取代码，并重新构建部署（构建速度可观）</p>
+</li>
+<li><p>同时vercel还支持serverless，也就是说，不仅能部署静态站点，还能部署后端服务，不过肯定有一定的限制。</p>
+</li>
+<li><p>默认状态下，Vercel 将会颁发并自动更新 SSL 证书。</p>
+</li>
+<li><p>也可以用vercel的部署+又拍云cdn 对访问速度进行优化，感兴趣的可以操作下</p>
+</li>
+</ul>
+<h1 id="自动部署"><a href="#自动部署" class="headerlink" title="自动部署"></a>自动部署</h1><ul>
+<li><p>推荐阅读博文</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.juanertu.com/archives/992bac21.html">使用 GitHub Actions 实现自动化部署和部署到服务器</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="魔改记录"><a href="#魔改记录" class="headerlink" title="魔改记录"></a>魔改记录</h1><ul>
+<li>到这个板块，希望你<strong>看完了官方文档里面的内容后</strong>，将已经添加的必要功能添加后，在看此章节后面的内容</li>
+</ul>
+<ul>
+<li>到这里了也希望大家记录一下自己的魔改记录，方便以后！！！</li>
+</ul>
+<ul>
+<li>这个板块的内容其实就是，就是在你网址美化的基础上进行魔改，当网页该有的轮子都造出来后，就是怎么让你的网页变的炫酷起来，那就是添加css、js等特效，具体的记录请参考这篇文章：<a href="https://www.vipyubai.top/post/a42befc2.html">butterfly美化记录</a></li>
+</ul>
+<h1 id="问题汇总-1"><a href="#问题汇总-1" class="headerlink" title="问题汇总"></a>问题汇总</h1><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol>
+<li><p>安装Hexo时遇见的报错</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/image-20220801193727750.png" alt="image-20220801193727750"></p>
+</li>
+</ol>
+<p>​    解决办法：</p>
+<p>​            重新配置了下npm安装的全局模块所在的路径，以及缓存cache的路径，又检查了一下环境变量是否正确</p>
+<p>设置全局模块命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;D:\node\node_global&quot;</span><br></pre></td></tr></table></figure>
+<p>设置cache模块命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set cache &quot;D:\node\node_cache&quot;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>上传到GitHub碰到 “ Deployer not found ”  问题</li>
+</ol>
+<p>​        解决办法：重新 deploy 即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>然后  hexo d  就能提交成功</p>
+<h1 id="问题解决思路"><a href="#问题解决思路" class="headerlink" title="问题解决思路"></a>问题解决思路</h1><ul>
+<li><p>我在安装hexo 的过程中也出现了很多问题，我谈谈是怎么解决的</p>
+<ul>
+<li>遇见问题不要慌，先找找报错信息，找到报错信息后，首先要弄懂什么意思，看是自己配置问题还是其它问题</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>如果报错的是某个文件第几行的话，大概率是配置问题，就得去提示的文件检查语法</li>
+</ul>
+<ul>
+<li>若不是配置问题在百度，大多数情况下都会有解决教程，然后根据解决办法解决下</li>
+</ul>
+<ul>
+<li>若你将报错信息百度，未能百度到答案，这时就要求助大佬或者使用git进行版本回退</li>
+</ul>
+<ul>
+<li>最后终极大法，那就是删除干净文件重新安装即可</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>按照步骤本教程一个基本的网页就搭建出来了，后面就是对网页的美化和优化</li>
+</ul>
+<ul>
+<li><p>优化推荐阅读博客</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://kmar.top/posts/7d9fb37e/">网站加载速度优化方案总结</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>这个系统毕竟是白嫖的，我相信大家的初衷也是白嫖把哈哈，但是有些事情我还得说明下：</p>
+<ul>
+<li>虽然是白嫖的，但访问速度和系统稳定性，是网站的最重要的标准，如果你不想花钱的话，我建议有些炫酷的美化功能能省则省，把该有的页面完善下就可以了，毕竟简洁也是一种美</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>在你美化博客的过程中，最好简单记录下你使用了什么功能，这样后面修改，更新相对容易些，比如：你觉得有更好的方案了，你就可以根据自己的记录，去删除掉之前的然后加上新的</li>
+</ul>
+<ul>
+<li>说明：有什么问题欢迎大家来星球大家共同探讨，或者给我留言</li>
+</ul>
+<ul>
+<li>最后：既然，你迈出了这一步就好好diy，维护好你的系统！！！！</li>
+</ul>
+</article><div class="business-center"><div class="business-card"><div class="business-flip"><div class="business-front"><div class="business-strip-bottom"></div><div class="business-strip-top"></div><img class="business-logo" width="80" height="80" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/自己的微信二维码.jpg#加群二维码" alt="cardcode"><div class="business-Invitation">Invitation</div><div class="business-chip"><div class="business-chip-line"></div><div class="business-chip-line"></div><div class="business-chip-line"></div><div class="business-chip-line"></div><div class="business-chip-main"></div></div><svg class="business-wave" viewBox="0 3.71 26.959 38.787" width="26.959" height="38.787" fill="white"><path d="M19.709 3.719c.266.043.5.187.656.406 4.125 5.207 6.594 11.781 6.594 18.938 0 7.156-2.469 13.73-6.594 18.937-.195.336-.57.531-.957.492a.9946.9946 0 0 1-.851-.66c-.129-.367-.035-.777.246-1.051 3.855-4.867 6.156-11.023 6.156-17.718 0-6.696-2.301-12.852-6.156-17.719-.262-.317-.301-.762-.102-1.121.204-.36.602-.559 1.008-.504z"></path><path d="M13.74 7.563c.231.039.442.164.594.343 3.508 4.059 5.625 9.371 5.625 15.157 0 5.785-2.113 11.097-5.625 15.156-.363.422-1 .472-1.422.109-.422-.363-.472-1-.109-1.422 3.211-3.711 5.156-8.551 5.156-13.843 0-5.293-1.949-10.133-5.156-13.844-.27-.309-.324-.75-.141-1.114.188-.367.578-.582.985-.542h.093z"></path><path d="M7.584 11.438c.227.031.438.144.594.312 2.953 2.863 4.781 6.875 4.781 11.313 0 4.433-1.828 8.449-4.781 11.312-.398.387-1.035.383-1.422-.016-.387-.398-.383-1.035.016-1.421 2.582-2.504 4.187-5.993 4.187-9.875 0-3.883-1.605-7.372-4.187-9.875-.321-.282-.426-.739-.266-1.133.164-.395.559-.641.984-.617h.094zM1.178 15.531c.121.02.238.063.344.125 2.633 1.414 4.437 4.215 4.437 7.407 0 3.195-1.797 5.996-4.437 7.406-.492.258-1.102.07-1.36-.422-.257-.492-.07-1.102.422-1.359 2.012-1.075 3.375-3.176 3.375-5.625 0-2.446-1.371-4.551-3.375-5.625-.441-.204-.676-.692-.551-1.165.122-.468.567-.785 1.051-.742h.094z"></path></svg><div class="business-card-number"><div class="business-section">余 白</div><div class="business-section">QQ:5824795</div></div><div class="business-end"><span class="business-end-text">created:</span><span class="business-end-date">03/08/2022</span></div><div class="business-card-holder">Welcome to Yubaihome</div><div class="business-master"><div class="business-circle business-master-red"></div><div class="business-circle business-master-yellow">   </div></div></div><div class="business-back"><div class="business-strip-black"></div><div class="business-ccv"><label>sitelink</label><div><a target="_blank" rel="noopener" href="https://vipyubai.top">https://vipyubai.top</a></div></div><div class="business-terms"><p>春风得意马蹄疾，一日看尽长安花。</p><p>欢迎来到余白的博客！愿你有美好的一天！</p></div></div></div></div></div><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>Hexo+Github搭建个人博客教程（二）</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="/%E4%BD%99%E7%99%BD%E3%81%AE%E5%8D%9A%E5%AE%A2">余白の博客</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>余白</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2022-08-22</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2022-08-22</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/Course/">Course</a></div><div class="post_share"><div class="social-share" data-image="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/HEXO1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdnjs.sourcegcdn.com/ajax/libs/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdnjs.sourcegcdn.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/微信收.png" target="_blank"><img class="post-qr-code-img" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/微信收.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><div class="relatedPosts"><div class="headline is-center"><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/a42befc33.html" title="butterfly美化日记(二)"><img class="cover" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/butterfly1.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-08-22</div><div class="title">butterfly美化日记(二)</div></div></a></div><div><a href="/post/a42befc6.html" title="hexo的优化：又拍云cdn访问加速"><img class="cover" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/CDN.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-08-27</div><div class="title">hexo的优化：又拍云cdn访问加速</div></div></a></div><div><a href="/post/a42befc0.html" title="Hexo+Github搭建免费博客教程(一)"><img class="cover" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/HEXO1.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-08-22</div><div class="title">Hexo+Github搭建免费博客教程(一)</div></div></a></div><div><a href="/post/a42befc2.html" title="butterfly美化日记(一)"><img class="cover" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/butterfly1.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-08-22</div><div class="title">butterfly美化日记(一)</div></div></a></div><div><a href="/post/46815.html" title="关于我电脑崩了这件事"><img class="cover" src="https://www.vipyubai.top//blog/系统重装.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-08-31</div><div class="title">关于我电脑崩了这件事</div></div></a></div></div></div><div id="post-comment"><div class="comment-head is-center"><div class="comment-headline"><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div></main><footer id="footer"><div class="wordcount"><span>余白居然写了 18.9k 字</span></br><span>还在努力更新中.. 加油！加油啦！</span></div><div class="footer-content"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span style="padding: 0.4rem">hexo</span></a><a><i class="fas fa-heart"></i></a><a href="https://butterfly.js.org/" target="_blank" rel="nofollow noopener"><span style="padding: 0.4rem">butterfly</span></a><div style="font-size: 0.7rem"><span id="timeDate">载入天数...</span><span> </span><span id="times">载入时分秒...</span><script src="/js/add/duration.js"></script></div></div><div class="statistics"><span id="site_uv">有 <span id="busuanzi_value_site_uv"></span><span> 人光顾过余白的小屋</span></span><span id="site_pv"><span>共 </span><span id="busuanzi_value_site_pv"></span><span> 次在这里相遇</span></span><span id="site_pv"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">陕ICP备 2022009697号</a></span><span id="site_pv"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">本网站由又拍云提供CDN加速</a></span></div></footer></div><div id="rightside"><div id="rightside-menu"><div id="rightside-avatar-card"><div class="is-center" id="rightside-avatar"><div class="avatar-img"><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/余白2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info__name">余白</div><div class="author-info__description">欢迎光临余白の小屋！</div></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/2X-ercha"><i class="fab fa-github"></i><span> Follow Me</span></a><div class="menu-info-social-icons is-center"><a class="social-icon" href="https://github.com/heiyushaoye" target="_blank" title="Github"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg></a><a class="social-icon" href="mailto:5824795@qq.com" target="_blank" title="Email"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-youxiang"></use></svg></a><a class="social-icon" href="https://space.bilibili.com/423405751" target="_blank" title="Bilibili"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-CN_bilibiliB"></use></svg></a><a class="social-icon" href="https://music.163.com/#/user/home?id=1664121825" target="_blank" title="网易云"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg></a><a class="social-icon" href="/about/" target="_blank" title="rss"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss"></use></svg></a></div></div><div class="is-center" id="rightside-menus"><button id="rightside-childmenu-contents" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="rightside-childmenu-comment"><a href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a></button><button id="rightside-childmenu-go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button><button id="rightside-childmenu-unfold" type="button" title="展开菜单"><i class="fas fa-angle-up"></i></button><button id="rightside-childmenu-fold" type="button" title="收起菜单"><i class="fas fa-angle-down"></i></button></div></div><div id="rightside-contents"><div class="card-widget" id="card-toc"><div class="item-headline is-center"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%85%B3%E9%94%AE%E9%A1%B5%E9%9D%A2%E7%94%9F%E6%88%90"><span class="toc-text">博客关键页面生成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="toc-text">标签页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E9%A1%B5"><span class="toc-text">分类页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5"><span class="toc-text">友情链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2"><span class="toc-text">创建友情链接页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E6%B7%BB%E5%8A%A0"><span class="toc-text">友情链接添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-text">关于我</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#404-%E9%A1%B5%E9%9D%A2%E6%B7%BB%E5%8A%A0"><span class="toc-text">404 页面添加</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E8%83%8C%E6%99%AF%E6%9B%B4%E6%94%B9"><span class="toc-text">主页背景更改</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-text">主题配置（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-text">导航栏的说明：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">字数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E6%8A%98%E5%8F%A0"><span class="toc-text">目录折叠</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-text">主题配置（二）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E6%96%87%E6%A1%A3"><span class="toc-text">进阶文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#gulp%E5%8E%8B%E7%BC%A9"><span class="toc-text">gulp压缩</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%9D%A5%E5%BF%85%E5%8A%9B%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="toc-text">添加来必力评论系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E4%BB%A3%E7%A0%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F%E7%9A%84%E8%AF%B4%E6%98%8E"><span class="toc-text">插入代码自定义样式的说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E8%AF%B4%E6%98%8E"><span class="toc-text">博客添加文章说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%83%A8%E7%BD%B2"><span class="toc-text">博客的部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D"><span class="toc-text">域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E7%9A%84%E5%A4%87%E6%A1%88%E6%8E%88%E6%9D%83"><span class="toc-text">域名的备案授权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E7%BA%BF%E9%83%A8%E7%BD%B2%E5%8F%8A%E5%85%A8%E7%AB%99-CDN-%E5%8A%A0%E9%80%9F"><span class="toc-text">双线部署及全站 CDN 加速</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB"><span class="toc-text">问题汇总</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0-coding"><span class="toc-text">部署到 coding</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0vercel"><span class="toc-text">部署到vercel</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-text">自定义域名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="toc-text">自动部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AD%94%E6%94%B9%E8%AE%B0%E5%BD%95"><span class="toc-text">魔改记录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB-1"><span class="toc-text">问题汇总</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF"><span class="toc-text">问题解决思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div></div></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    let initData = {
+      el: '#twikoo-wrap',
+      envId: 'https://x.vipyubai.top/',
+      region: ''
+    }
+
+    if (false) {
+      const otherData = false
+      initData = Object.assign(initData, otherData)
+    }
+    
+    twikoo.init(initData)
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://x.vipyubai.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdnjs.sourcegcdn.com/ajax/libs/twikoo/1.5.4/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script src="/js/strly.js"></script><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script><script async src="//at.alicdn.com/t/font_2749059_1lswi5j6yqg.js"></script><script src="/js/add/nav.js"></script><script src="/js/add/rightside.js"></script><script src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/js/jquery.min.js"></script><script src="https://cdn1.tianli0.top/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script type="text/javascript" src="/js/crash_cheat.js"></script><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.vipyubai.top/categories/教程/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💻 余白の教程大全 (6)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://www.vipyubai.top/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="ghbdages" style="overflow:hidden;max-height:180px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v5.3.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.7.0-b2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.sourcegcdn.com/" style="margin-inline:5px" title="本站使用Source Global CDN为部分静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-sourcegcdn-orange?style=flat&amp;logo=Apache%20RocketMQ" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr仅用于访问部分静态资源"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init_js.min.js"></script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="post/a42befc0.html" alt=""><img width="48" height="48" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/HEXO1.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-22</span><a class="blog-slider__title" href="post/a42befc0.html" alt="">Hexo+Github搭建免费博客教程(一)</a><div class="blog-slider__text">详细hexo博客搭建教程！</div><a class="blog-slider__button" href="post/a42befc0.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="post/a42befc66.html" alt=""><img width="48" height="48" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/HEXO1.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-22</span><a class="blog-slider__title" href="post/a42befc66.html" alt="">Hexo+Github搭建个人博客教程（二）</a><div class="blog-slider__text">详细hexo博客搭建教程！</div><a class="blog-slider__button" href="post/a42befc66.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="post/a42befc2.html" alt=""><img width="48" height="48" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/butterfly1.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-22</span><a class="blog-slider__title" href="post/a42befc2.html" alt="">butterfly美化日记(一)</a><div class="blog-slider__text">butterfly美化步骤记录！</div><a class="blog-slider__button" href="post/a42befc2.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="post/a42befc33.html" alt=""><img width="48" height="48" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/butterfly1.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-22</span><a class="blog-slider__title" href="post/a42befc33.html" alt="">butterfly美化日记(二)</a><div class="blog-slider__text">优质的butterfly美化教程推荐！</div><a class="blog-slider__button" href="post/a42befc33.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="post/a42befc6.html" alt=""><img width="48" height="48" src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1024/CDN.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-27</span><a class="blog-slider__title" href="post/a42befc6.html" alt="">hexo的优化：又拍云cdn访问加速</a><div class="blog-slider__text">博客访问速度的优化！！！</div><a class="blog-slider__button" href="post/a42befc6.html" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
